@@ -1,0 +1,372 @@
+/*======================= Establece el diseño ============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+
+/* =================== Variables CSS ====================*/
+:root {
+    --Color-Azul: rgba(238, 116, 34, 0.863);
+    --Fondo-Pantalla: #e7dcdc;
+    --Color-Blanco: #fff;
+    --Sombra: rgba(0, 0, 0, 0.5);
+    --Color-Verde: #22b65f;
+}
+
+/* ============== Encabezado ==============*/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--Color-Blanco);
+    z-index: 100;
+}
+
+/*=========== Cuerpo ==============*/
+body {
+    background: var(--Fondo-Pantalla);
+}
+
+/*================= Superior del encabezado ==============*/
+.header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+/* ============ logotipo ====================*/
+.logo img {
+    width: 250px;
+}
+
+/* ================= Barra de menú principal ============*/
+.container__menu {
+    width: 100%;
+    height: 70px;
+    background: var(--Color-Azul);
+    padding: 0 20px;
+}
+
+/* ============ El menú principal ===============*/
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+/*=============== Estilos para la navegación =================*/
+nav {
+    height: 100%;
+}
+
+nav > ul {
+    height: 100%;
+    display: flex;
+}
+
+/*====================== Elementos del menú ===============*/
+nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+/*=================== Establece un fondo de icono =====================*/
+.nav > ul > li:first-child > a {
+    background-image: url(../Icons/home.gif);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px 40px;
+}
+
+/*============== Hover icono ================== */
+.nav > ul > li:first-child:hover > a {
+    background-image: url(../Icons/home.gif);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px 45px;
+}
+
+/* ================= Enlaces del menú ===============*/
+nav > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: var(--Color-Blanco);
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+/* ============== Mouse sobre un enlace del menú =============*/
+nav > ul > li > a:hover {
+    transform: scale(1.1);
+    background: var(--Color-Verde);
+    box-shadow: 0px 0px 10px 0px var(--Sombra);
+}
+
+/*==================== Elemento seleccionado =============*/
+#selected {
+    transform: scale(1.1);
+    background-color: var(--Color-Verde);
+    box-shadow: 0px 0px 10px 0px var(--Sombra);
+}
+
+/*=================== Estilos para los submenús ================== */
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: var(--Color-Azul);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px var(--Sombra);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+/*================== Hover de Submenu ============= */
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+/* ================ Flecha del submenú ===================*/
+nav ul li ul:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--Color-Azul);
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+/* ================= Elementos del submenú ==================*/
+nav ul li ul li a {
+    display: block;
+    color: var(--Color-Blanco);
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+/* ================= Mouse sobre un elemento del submenú ======================*/
+nav ul li ul li a:hover {
+    background: var(--Color-Verde);
+    color: var(--Color-Blanco);
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px var(--Sombra);
+}
+
+/*============= Elementos responsivos =============*/
+.icon__menu {
+    font-size: 26px;
+    color: var(--Color-Blanco);
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+/*============= Etiqueta del checkbox ============== */
+#label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+/* ====================== Checkbox para el menú desplegable ============== */
+#check__menu {
+    display: none;
+}
+
+/* ================== Foto de perfil =============== */
+.perfil_foto {
+    border-radius: 50%;
+    z-index: 100;
+}
+
+/* ============== Alineación barra de navegación =================*/
+.nav1 {
+    margin-right: 70px;
+}
+
+/* ================= Caja de búsqueda ===============*/
+#search-box {
+    position: relative;
+    width: 25%;
+    margin: 0;
+}
+
+#search-form {
+    height: 32px;
+    border: 1px solid var(--Color-Azul);
+    border-radius: 15px;
+    background-color: var(--Color-Blanco);
+    overflow: hidden;
+}
+
+#search-text {
+    font-size: 14px;
+    color: var(--Color-Blanco);
+    border-width: 0;
+    background: transparent;
+}
+
+#search-box input[type="text"] {
+    width: 90%;
+    padding: 8px 0 12px 1em;
+    color: var(--Sombra);
+    outline: none;
+}
+
+#search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    width: 80px;
+    font-size: 14px;
+    color: var(--Color-Blanco);
+    text-align: center;
+    line-height: 4px;
+    border-width: 0;
+    background-color: var(--Color-Azul);
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+}
+
+/* ========================== Estilos responsivos =======================*/
+@media screen and (max-width: 720px) {
+
+    #search-box {
+        width: 50%; 
+        margin-top: 20px; 
+    }
+
+    #search-form {
+        height: 42px;
+    }
+
+    #search-text {
+        font-size: 16px;
+    }
+
+    #search-box input[type="text"] {
+        padding: 10px 0 14px 1em; 
+    }
+
+    #search-button {
+        height: 42px; 
+    }
+
+    .header__superior {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        background-color: var(--Color-Azul);
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover {
+        transform: scale(1);
+    }
+    
+    nav ul li ul {
+        left: 90px;
+    }
+
+    nav > ul > li:hover ul {
+        top: 50px;
+    }
+
+    nav > ul > li:first-child a {
+        background-position: 20px;
+    }
+
+    nav > ul > li > a {
+        display: block;
+    }
+
+    #selected {
+        transform: scale(1);
+    }
+
+    #label__check {
+        display: block;
+    }
+
+    .icon__menu {
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul {
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    main {
+        margin-top: 158px;
+    }
+}
+
+
+
+.popover {
+    display: none;
+    position: absolute;
+    width: auto; /* Cambia el valor según tus necesidades */
+    padding: 10px; /* Cambia el valor según tus necesidades */
+    background-color: var(--Color-Azul);
+    border: 3px solid var(--Color-Verde);
+    color: var(--Color-Blanco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 20px;
+    text-align: center;
+    /* Otros estilos de apariencia, como margen y relleno */
+    
+    top: 160px; /* Cambia el valor para ajustar la distancia desde la parte superior */
+}
+
+  

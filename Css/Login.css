@@ -1,0 +1,94 @@
+/* ========== Reset de estilos ========== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* ========== Variables de color ========== */
+:root {
+  --Color-Azul: rgba(10, 86, 172, 0.863);
+  --Color-Verde: #22b65f;
+  --Color-Blanco: #ffffff;
+  --Fondo-Pantalla: #e7dcdc;
+}
+
+/* ========== body ========== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--Fondo-Pantalla);
+}
+
+/* ========== Contenedor del formulario ========== */
+.Contenedor_login {
+  background: var(--Color-Azul);
+  color: var(--Color-Blanco);
+  width: 420px;
+  height: 350px;
+  border: 3px solid var(--Color-Blanco);
+  border-radius: 40px;
+}
+
+/* ========== Título del formulario ========== */
+.Contenedor_login h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ========== Inputs ========== */
+.Contenedor_login .input_login {
+  position: relative;
+  width: 90%;
+  height: 50px;
+  margin: 30px auto;
+}
+
+.input_login input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid var(--Color-Blanco);
+  border-radius: 40px;
+  font-size: 16px;
+  color: var(--Color-Blanco);
+  padding-left:20px ;
+}
+
+.input_login input::placeholder {
+    color :var(--Color-Verde);
+}
+
+.input_login lord-icon {
+    position :absolute ;
+    right :20px ;
+    top :50% ;
+    transform :translateY(-50%);
+    font-size :10px ;
+}
+
+/* ========== Botón inicio de sesión ========== */
+.Contenedor_login .btn_login {
+    background :var(--Color-Verde);
+    margin :30px auto ;
+    width :90% ;
+    height :45px ;
+    border :none ;
+    outline :none ;
+    border :2px solid var(--Color-Blanco);
+    border-radius :40px ;
+    box-shadow :0   var(--Color-Blanco);
+    cursor :pointer ;
+    font-size :20px ;
+    font-weight :600 ;
+    color :var(--Color-Blanco);
+    display :flex ;
+    justify-content :center ;
+    align-items :center ;
+}

@@ -1,0 +1,143 @@
+/* Reset de estilos y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Estilos para el select personalizado */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: rgba(10, 86, 172, 0.863);
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #22b65f;
+    cursor: pointer;
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Estilos para el contenedor del select personalizado */
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+    border-radius: 40px;
+    border: 2px solid #ffffff;
+    width: 90%;
+    height: 50px;
+    margin: 30px 17px;
+}
+
+/* Estilos generales del body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e7dcdc;
+}
+
+/* Estilos para el contenedor principal del formulario de login */
+.Contenedor_login {
+    background: rgba(10, 86, 172, 0.863);
+    color: rgb(235, 235, 235);
+    width: 420px;
+    border: 3px solid #ffffff;
+    border-radius: 40px;
+    margin-top: 200px;
+}
+
+/* Estilos para el encabezado del formulario */
+.Contenedor_login h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos para los campos de input del formulario */
+.Contenedor_login .input_login {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    margin: 30px 17px;
+}
+
+.input_login input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(240, 255, 240);
+    padding: 20px 45px 20px 20px;
+}
+
+.input_login input::placeholder {
+    color: #22b65f;
+}
+
+.input_login span{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* Estilos para el botón de login */
+.Contenedor_login .btn_login {
+    background: #22b65f;
+    margin: 30px 17px;
+    width: 90%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #e5e6ec;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+/* Estilos para los botones en general */
+.btn {
+    border: 2px solid #f5f6f8;
+    border-radius: 40px;
+    padding: 5px 10px;
+    font-family: 'Helvetica', sans-serif;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 50px;
+    margin: 30px 17px;
+}
+
+.btn:hover {
+    background-color: #22b65f;
+    color: #ffffff;
+}
