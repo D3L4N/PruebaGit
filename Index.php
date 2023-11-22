@@ -71,4 +71,6 @@ if (isset($_SESSION['Usuario'])) {
     </div>
 </body>
 </html>
+git rm --cached inventorio
+
 
